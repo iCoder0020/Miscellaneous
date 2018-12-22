@@ -1,6 +1,6 @@
 /*
 Merge Sort
-Time Complexity: O(N*logn)
+Time Complexity: O(N*logN)
 */
 
 #include <iostream>

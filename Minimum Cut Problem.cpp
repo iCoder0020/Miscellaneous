@@ -3,10 +3,7 @@ Minimum Cut Problem
 Time Complexity: O(N^6)
 */
 
-#include <iostream>
-#include <stdio.h>
-#include <vector>
-#include <stdlib.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 
