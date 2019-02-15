@@ -1,0 +1,7 @@
+//to rename all txt files to cpp
+for f in *.txt; do 
+mv -- "$f" "${f%.txt}.cpp"
+done
+
+//to remove all txt files
+find . -name '*.txt' -exec rm -r {} \;

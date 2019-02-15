@@ -9,7 +9,7 @@ using namespace std;
  
 int main()
 {
-	int A[] = {1,2,3,7,8,15,21,0};
+	int A[] = {1,2,3,7,8,15,20,19,1};
 	int N = sizeof(A)/sizeof(int);
 	int min, mid, max;
 	min = 0;
