@@ -47,6 +47,3 @@ int main()
 	cout<<(long long int)(ans)<<endl;
 	return 0;
 }
-
-//69119377652
-//67311454237
