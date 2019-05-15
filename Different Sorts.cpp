@@ -202,7 +202,7 @@ void quick_sort(vector<int> A, int N)
 	print(A);
 }
 
-void counting_sort(vector<int> A, int N)
+void counting_sort1(vector<int> A, int N)
 {
 	map<int,int>M;
 	for(int n = 0; n<N; n++)
@@ -228,6 +228,27 @@ void counting_sort(vector<int> A, int N)
 	print(A);
 }
 
+void counting_sort2(vector<int> A, int N, int range_low, int range_max)
+{
+	int range = range_max - range_low + 1;
+	vector<int> B(N, 0);
+	vector<int> C(range, 0);
+	for(int n = 0; n<N; n++)
+	{
+		C[A[n]+range_max]++;
+	}
+	for(int n = 1; n<range; n++)
+	{
+		C[n] += C[n-1];
+	}
+	for(int n = N-1; n>=0; n--)
+	{
+		B[C[A[n]+range_max]-1] = A[n];
+		C[A[n]+range_max]--;
+	}
+	print(B);
+}
+
 int main() 
 {
     vector<int> A = {1, 6, 78, -5, 0, -69, 10, 8, -7, 42, 0};
@@ -240,7 +261,8 @@ int main()
     insertion_sort(A, N);
     merge_sort(A, N);
     quick_sort(A, N);
-    counting_sort(A, N);
+    counting_sort1(A, N);
+    counting_sort2(A, N, -1e5, 1e5);
     
     return 0;
 }

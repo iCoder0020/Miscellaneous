@@ -213,12 +213,5 @@ int main()
 	inorder(root);
 	cout<<endl;
 
-	root = remove(root, -5);
-	root = remove(root, 0);
-
-	cout<<"Inorder: ";
-	inorder(root);
-	cout<<endl;
-
 	return 0;
 }

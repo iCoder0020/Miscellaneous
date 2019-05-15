@@ -23,14 +23,11 @@ void switch_places(int i, int j)
 void heap_insert(int num)
 {
 	heap.push_back(num);
-	if(heap.size() != 0)
+	int pos = heap.size()-1;
+	while(heap[pos] < heap[parent(pos)])
 	{
-		int pos = heap.size()-1;
-		while(heap[pos] < heap[parent(pos)])
-		{
-			switch_places(pos, parent(pos));
-			pos = parent(pos);
-		}
+		switch_places(pos, parent(pos));
+		pos = parent(pos);
 	}
 }
 

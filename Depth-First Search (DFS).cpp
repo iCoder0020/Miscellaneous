@@ -3,11 +3,7 @@ Depth-First Search (DFS)
 Time Complexity: O(N+M)
 */
 
-#include <iostream>
-#include <stdio.h>
-#include <vector>
-#include <stdlib.h>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 struct stack
