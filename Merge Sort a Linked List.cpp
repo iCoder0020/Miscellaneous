@@ -2,35 +2,35 @@
 
 using namespace std;
 
-struct NODE
+struct ListNode
 {
-    int data;
-    NODE *next;
+    int val;
+    ListNode *next;
 };
 
-void insert_at_head(NODE** head_ref, int node_data)
+void insert_at_head(ListNode** head_ref, int node_data)
 {
-    NODE* node = new NODE;
-    node->data = node_data;
-    node->next = *head_ref;
-    *head_ref = node;
+    ListNode* ListNode = new ListNode;
+    ListNode->val = node_data;
+    ListNode->next = *head_ref;
+    *head_ref = ListNode;
 }
 
-void print(NODE* head)
+void print(ListNode* head)
 {
-    NODE* temp = head;
+    ListNode* temp = head;
     while(temp != NULL)
     {
-        cout<<temp->data<<" ";
+        cout<<temp->val<<" ";
         temp = temp->next;
     }
     cout<<endl;
 }
 
-void divide(NODE* head, NODE** a, NODE** b)
+void divide(ListNode* head, ListNode** a, ListNode** b)
 {
-    NODE* slow;
-    NODE* fast;
+    ListNode* slow;
+    ListNode* fast;
     slow = head;
     fast = head->next;
 
@@ -48,9 +48,9 @@ void divide(NODE* head, NODE** a, NODE** b)
     slow->next = NULL;
 }
 
-NODE* merge(NODE* a, NODE* b)
+ListNode* merge(ListNode* a, ListNode* b)
 {
-    NODE* result = NULL;
+    ListNode* result = NULL;
 
     if(a == NULL)
     {
@@ -62,7 +62,7 @@ NODE* merge(NODE* a, NODE* b)
     }
     else
     {
-        if(a->data <= b->data)
+        if(a->val <= b->val)
         {
             result = a;
             result->next = merge(a->next, b);
@@ -76,11 +76,11 @@ NODE* merge(NODE* a, NODE* b)
     return result;
 }
 
-void merge_sort(NODE** head_ref)
+void merge_sort(ListNode** head_ref)
 {
-    NODE* head = *head_ref;
-    NODE* a;
-    NODE* b;
+    ListNode* head = *head_ref;
+    ListNode* a;
+    ListNode* b;
 
     if(head == NULL || head->next == NULL)
     {
@@ -100,7 +100,7 @@ int main()
 {
     int N;
     cin>>N;
-    NODE* a = NULL;
+    ListNode* a = NULL;
     int temp;
     for(int n = 0; n<N; n++)
     {

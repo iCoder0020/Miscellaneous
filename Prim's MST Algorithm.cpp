@@ -39,13 +39,11 @@ int32_t main()
 
     cin>>start;
 
-    vector<int>dis(N+1, INT_MAX);
-    vector<bool>vis(N+1,false);
+    vector<bool>vis(N+1, false);
 
     priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> pq;
 
     pq.push({0, start});
-    dis[start] = 0;
 
     int sum = 0;
 
