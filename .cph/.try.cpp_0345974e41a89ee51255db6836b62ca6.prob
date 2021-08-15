@@ -1,0 +1,1 @@
+{"name":"Local: try","url":"/home/ishan/Documents/Miscellaneous/try.cpp","tests":[{"id":1619893645293,"input":"2\n3\n1 2 3\n10\n1 2 8 5 8 2 1 9 7 9","output":"10\n434"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/ishan/Documents/Miscellaneous/try.cpp","group":"local","local":true}
